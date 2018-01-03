@@ -13,8 +13,8 @@ import com.jorgereina.www.realestateapp.model.Entry;
 public class EntryHolder extends RecyclerView.ViewHolder {
 
     private TextView titleTv;
-    public TextView dateTv;
-    public TextView descriptionTv;
+    private TextView dateTv;
+    private TextView descriptionTv;
 
     public EntryHolder(View itemView) {
         super(itemView);
