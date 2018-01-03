@@ -19,6 +19,7 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.Query;
 import com.jorgereina.www.realestateapp.model.Entry;
+import com.squareup.picasso.Picasso;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -43,7 +44,7 @@ public class MainActivity extends AppCompatActivity {
 
         databaseReference = FirebaseDatabase.getInstance().getReference();
 
-        Query query = databaseReference.child("users");
+        Query query = databaseReference.child("listings");
 
         Log.d(TAG, "onCreate: " + FirebaseDatabase.getInstance().getReference().child("users"));
 
@@ -67,8 +68,7 @@ public class MainActivity extends AppCompatActivity {
 
                 Entry entry = new Entry(null, "hello", "hello", "hello", "hello");
 
-//                databaseReference.push().setValue(inputEt.getText().toString());
-                databaseReference.child("users").push().setValue(entry);
+                databaseReference.child("listings").push().setValue(entry);
                 inputEt.setText("");
             }
         });
