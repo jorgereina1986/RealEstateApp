@@ -1,22 +1,23 @@
-package com.jorgereina.www.realestateapp;
+package com.jorgereina.www.realestateapp.feed;
 
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.TextView;
 
+import com.jorgereina.www.realestateapp.R;
 import com.jorgereina.www.realestateapp.model.Entry;
 
 /**
  * Created by jorgereina on 1/2/18.
  */
 
-public class EntryHolder extends RecyclerView.ViewHolder {
+public class EntryViewHolder extends RecyclerView.ViewHolder {
 
     private TextView titleTv;
     private TextView dateTv;
     private TextView descriptionTv;
 
-    public EntryHolder(View itemView) {
+    public EntryViewHolder(View itemView) {
         super(itemView);
 
         titleTv = itemView.findViewById(R.id.title_tv);

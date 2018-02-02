@@ -2,6 +2,8 @@ package com.jorgereina.www.realestateapp.model;
 
 import android.widget.ImageView;
 
+import com.google.firebase.database.FirebaseDatabase;
+
 /**
  * Created by jorgereina on 11/29/17.
  */
@@ -22,7 +24,6 @@ public class Entry {
         this.title = title;
         this.description = description;
         this.date = date;
-        this.uid = uid;
     }
 
     public ImageView getPicture() {
@@ -57,11 +58,4 @@ public class Entry {
         this.date = date;
     }
 
-    public String getUid() {
-        return uid;
-    }
-
-    public void setUid(String uid) {
-        this.uid = uid;
-    }
 }
